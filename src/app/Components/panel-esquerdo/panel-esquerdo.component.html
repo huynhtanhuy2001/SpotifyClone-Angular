@@ -1,0 +1,51 @@
+<div class="row">
+  <div class="col-2 me-5 menu-left">
+    <div class="row">
+      <div class="col">
+        <img id="logo" src="/assets/images/spotify-logo.png" alt="" srcset="" />
+        <div class="col mt-5">
+          <app-button
+            [button]="'Home'"
+            [selecionado]="menuSeleccionado === 'Home'"
+            (click)="buttonClick('Home')"
+            routerLink="/player/home"
+          >
+          </app-button>
+          <app-button
+            [button]="'Pesquisar'"
+            [selecionado]="menuSeleccionado === 'Pesquisar'"
+            (click)="buttonClick('Pesquisar')"
+          ></app-button>
+          <app-button
+            [button]="'Artistas'"
+            [selecionado]="menuSeleccionado === 'Artistas'"
+            (click)="buttonClick('Artistas')"
+          ></app-button>
+        </div>
+        <div class="row">
+          <div class="col btn btn-primary p-2">Playlist</div>
+        </div>
+        <div class="row play">
+          <div class="col">
+            <app-button
+              *ngFor="let playlist of playlists"
+              [button]="playlist.name"
+              [selecionado]="menuSeleccionado === playlist.id"
+              (click)="irParaPlaylist(playlist.id)"
+            ></app-button>
+          </div>
+        </div>
+        <div class="row">
+          <app-logout></app-logout>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-7">
+    <div class="row">
+      <div class="col"><router-outlet></router-outlet></div>
+    </div>
+  </div>
+  <div class="col menu-right"><app-player-card></app-player-card></div>
+</div>
+

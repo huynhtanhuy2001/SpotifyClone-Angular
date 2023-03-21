@@ -1,0 +1,75 @@
+<div class="row">
+  <div class="col">
+    <div class="row">
+      <div class="col">
+        <ul>
+          <li><a routerLink="/player/home">Home</a></li>
+          <li><a routerLink="/like">Favorite music</a></li>
+          <li><a routerLink="/category">Category</a></li>
+          <li><a routerLink="/charts">Charts</a></li>
+          <li style="float: right">
+            <a class="active" href="#about">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="row">
+          <div class="col">
+            <h2 class="title">Top Music</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <app-top-artista class="mt-2"></app-top-artista>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <app-painel-esquerdo></app-painel-esquerdo>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Titulo</th>
+                  <th>Artista</th>
+                  <th>Tempo</th>
+                  <th>Album</th>
+                </tr>
+              </thead>
+              <tbody>
+
+                <tr
+                  class="musica executando"
+                  (click)="executarMusica(musica)"
+                  [class.executando]="musica.id === musicaAtual.id"
+                  *ngFor="let musica of musicas"
+                >
+                  <td><i class="fa fa-play tim" aria-hidden="true"></i></td>
+                  <td>{{ musica.titulo }}</td>
+                  <td>{{ obterArtistas(musica) }}</td>
+                  <td>{{ musica.tempo }}</td>
+                  <td>{{ musica.album.name }}</td>
+                  <td>
+                    <i
+                      (click)="clickAddCategory()"
+                      class="fa fa-heart-o tim"
+                      aria-hidden="true"
+                    ></i>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

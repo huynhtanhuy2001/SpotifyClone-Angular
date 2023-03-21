@@ -1,0 +1,10 @@
+<app-nav></app-nav>
+
+<h2 class="text-center pt-2">Favorite Music</h2>
+<div class="row">
+  <div class="col-3 border p-3" *ngFor="let playlist of playlists">
+    <img [src]="playlist.imagemUrl" width="350px" /><br />
+    <h3>{{ playlist.name }}</h3>
+  </div>
+</div>
+<router-outlet></router-outlet>

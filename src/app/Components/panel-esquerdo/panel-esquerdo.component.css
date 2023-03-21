@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.topnav {
+  border: 2px solid black;
+}
+#logo {
+  width: 120px;
+}
+.menu-left {
+  align-items: center;
+  text-align: center;
+  padding-top: 20px;
+
+  bottom: 1px 1px 15px black;
+  border-right: 2px solid black;
+}
+.play {
+  max-height: 400px;
+  overflow: auto;
+}
+.left-end {
+  background-color: antiquewhite;
+}
+.menu-right {
+  border-left: 2px solid black;
+  margin-left: 10px;
+}

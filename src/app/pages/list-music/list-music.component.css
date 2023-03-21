@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+}
+.title {
+  padding-top: 10px;
+  padding-left: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+}
+.musica:hover {
+  border: 2px solid #111;
+}
+.tim:hover {
+  background-color: #d51a1a;
+  border-radius: 30%;
+  padding: 3px;
+}

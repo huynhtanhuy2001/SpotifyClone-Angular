@@ -1,0 +1,17 @@
+* {
+  background-color: rgb(246, 238, 238);
+
+  margin: 0;
+}
+.hinh {
+  width: 70px;
+  height: auto;
+  border-radius: 50%;
+  padding: 0;
+  margin: 0;
+}
+.namelog {
+  font-size: small;
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+}

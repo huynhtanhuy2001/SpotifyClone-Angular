@@ -1,0 +1,40 @@
+<div class="row">
+  <app-nav></app-nav>
+  <app-baner [ImagemUrl]="bannerImageUrl" [Text]="bannerTexto"></app-baner>
+  <div class="title">{{ title }}</div>
+  <div>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Titulo</th>
+          <th>Artista</th>
+          <th>Tempo</th>
+          <th>Album</th>
+        </tr>
+      </thead>
+      <tbody>
+       
+        <tr
+          class="musica executando"
+          (click)="executarMusica(musica)"
+          [class.executando]="musica.id === musicaAtual.id"
+          *ngFor="let musica of musicas"
+        >
+          <td><i class="fa fa-play tim" aria-hidden="true"></i></td>
+          <td>{{ musica.titulo }}</td>
+          <td>{{ obterArtistas(musica) }}</td>
+          <td>{{ musica.tempo }}</td>
+          <td>{{ musica.album.name }}</td>
+          <td>
+            <i
+
+              class="fa fa-heart-o tim"
+              aria-hidden="true"
+            ></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.play {
+ 
+  text-align: center;
+  font-size: 25px;
+
+  padding: 5px;
+}
+.play-2 > i:hover {
+  font-size: 30px;
+}

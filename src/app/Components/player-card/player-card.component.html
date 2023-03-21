@@ -1,0 +1,31 @@
+<div class="row menu-right">
+  <div class="col">
+    <div class="row">
+      <div class="col" [style.background-image]=""></div>
+      <div class="row">
+        <div class="col text-center">
+          <p>{{ musica.titulo }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row play mt-3">
+      <div class="col play-2">
+        <i
+          class="fa fa-step-backward"
+          aria-hidden="true"
+          (click)="voltarMusica()"
+        ></i>
+      </div>
+      <div class="col play-2">
+        <i class="fa fa-play" aria-hidden="true"></i>
+      </div>
+      <div class="col play-2">
+        <i
+          class="fa fa-step-forward"
+          aria-hidden="true"
+          (click)="proximaMusica()"
+        ></i>
+      </div>
+    </div>
+  </div>
+</div>
